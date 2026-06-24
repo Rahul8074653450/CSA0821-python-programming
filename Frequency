@@ -1,0 +1,11 @@
+arr = list(map(int, input("Enter numbers separated by space: ").split()))
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+print("Frequency of each element:")
+for key, value in freq.items():
+    print(f"{key} : {value}")
+max_freq = max(freq.values())
+most_frequent = [key for key, value in freq.items() if value == max_freq]
+print("\nElement(s) with highest frequency:", most_frequent)
+print("Highest frequency count:", max_freq)

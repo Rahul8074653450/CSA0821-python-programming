@@ -1,0 +1,18 @@
+l=[1,2,3,5,8]
+t=False
+for i in range(len(l)):
+    if i==0:
+        continue
+    elif i==len(l)-1:
+        break
+    else:
+        s=l[i]+l[i-1]
+        if l[i+1]==s:
+            t=True
+        else:
+            t=False
+            break
+if t==True:
+    print("It is an aditive sequence")
+else:
+    print("not an additive sequence")

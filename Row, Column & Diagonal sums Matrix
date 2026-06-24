@@ -1,0 +1,26 @@
+matrix = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+n = len(matrix)
+# Row sums
+print("Row-wise sums:")
+for i in range(n):
+    print(f"Row {i+1} =", sum(matrix[i]))
+
+# Column sums
+print("\nColumn-wise sums:")
+for j in range(n):
+    col_sum = 0
+    for i in range(n):
+        col_sum += matrix[i][j]
+    print(f"Column {j+1} =", col_sum)
+
+
+
+# Diagonal sums
+main_diag = 0
+secondary_diag = 0
+
+for i in range(n):
+    main_diag += matrix[i][i]
+    secondary_diag += matrix[i][n - i - 1]
+print("\nMain diagonal sum =", main_diag)
+print("Secondary diagonal sum =", secondary_diag)

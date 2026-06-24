@@ -1,0 +1,14 @@
+# A tech number has an even number of digits.
+# If the number is split into two equal halves,
+# then the square of the sum of these halves is equal to the number itself. 
+# Write a program to generate and print all four-digit tech numbers.
+n=1000
+while n<=9999:
+    s=str(n)
+    s1=int(s[0:2])
+    s2=int(s[2:4])
+    su=s1+s2
+    sq=su*su
+    if sq==n:
+        print(n)
+    n+=1

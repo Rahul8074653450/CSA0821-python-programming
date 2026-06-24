@@ -1,0 +1,5 @@
+arr = list(map(int, input("Enter numbers: ").split()))
+arr.sort()
+middle = arr[len(arr)//2]
+print("Sorted Array:", arr)
+print("Middle Element:", middle)

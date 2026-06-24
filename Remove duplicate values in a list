@@ -1,0 +1,11 @@
+l=[1,2,3,3,4,5,5,5,5,7,8,9,9,9,9]
+for i in l:
+    count=l.count(i)
+    ind=l.index(i)
+    if count>1:
+        while count>1:
+            l.pop(ind)
+            count=l.count(i)
+            
+print("After removing duplicates")
+print(l)

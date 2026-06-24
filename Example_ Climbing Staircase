@@ -1,0 +1,22 @@
+# You are climbing a stair case.It takes n steps to reach the top each time you can either climb 1 or 2 step. In how many different ways can you climb to the top?
+def climb_stairs(n):
+    # Base cases
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    
+    # Initialize first two steps
+    a, b = 1, 2  # ways(1) and ways(2)
+
+    # Loop from step 3 to n
+    for i in range(3, n + 1):
+        c = a + b  # current ways = previous two steps
+        a, b = b, c  # move to next steps
+
+    return b  # b now holds the total ways for n steps
+
+
+# Input
+n = int(input("Enter number of steps: "))
+print("Number of distinct ways to climb to the top:", climb_stairs(n))
